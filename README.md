@@ -1,4 +1,4 @@
-##HTTP (Protocolo de Transferencia de Hipertexto)
+##HTTP (Protocolo de Tranferencia de Hipertexto)
 
 ##Bases Esenciales
 

@@ -90,7 +90,7 @@ Connection: close
 Content-Type: text/html  
 X-Pad: avoid browser bug  
   
-<html><body><h1>It works!</h1></body></html>  
+*<html><body><h1>It works!</h1></body></html>*  
 
 El navegador recibe el mensaje de respuesta, interpreta el mensaje y muestra el contenido del mensaje en la ventana del navegador de acuerdo con el tipo de medio de la respuesta (como en la cabecera de respuesta Content-Type). Tipo de medios comunes incluyen "text / plain", "text / html", "image / gif", "image / jpeg", "audio / mpeg", "video / mpeg", "aplicación / pdf" y "application / pdf ".
 

@@ -1,10 +1,10 @@
-**HTTP (Protocolo de Transferencia de Hipertexto)**
+##HTTP (Protocolo de Transferencia de Hipertexto)
 
-**Bases Esenciales**
+##Bases Esenciales
 
 *Introduccion*
 
-*La Web*
+**La WEB**
 
 Internet (o la web) es un sistema de informacion cliente/servidor de distribucion masiva como se muestra en el siguiente diagrama.
 
@@ -13,23 +13,21 @@ Format:![Alt Tex](url)
 
 Muchas aplicaciones se estan ejecutando al mismo tiempo a traves de Internet, tales como la navegacion en internet, correo electronico, transferencia de arhivos, transmision de audio y video(streaming). Para que una comunicacion adecuada tenga lugar entre el cliente y el servidor, estas aplicaciones deben estar de acuerdo con un protocolo especifico de nivel de aplicacion como HTTP, FTP, SMTP, POP y  etc.
 
-**Protocolo de Transferencia de Hipertexto**
+**Protocolo de Transferencia de Hipertexto (HTTP)**
 
 HTTP (Protocolo de Transferencia de Hipertexto) es quizas el protocolo de aplicacion mas popular en Internet(o en la web).
-
-
-HTTP es un protocolo cliente-servidor de petición-respuesta asimétrica como se ilustra. Un cliente HTTP envía un mensaje de petición a un servidor HTTP. El servidor, a su vez, devuelve un mensaje de respuesta. En otras palabras, HTTP es un protocolo de extracción, el cliente extrae la información desde el servidor (en lugar de servidor empuja información hasta el cliente).
+*HTTP es un protocolo cliente-servidor de petición-respuesta asimétrica como se ilustra. Un cliente HTTP envía un mensaje de petición a un servidor HTTP. El servidor, a su vez, devuelve un mensaje de respuesta. En otras palabras, HTTP es un protocolo de extracción, el cliente extrae la información desde el servidor (en lugar de servidor empuja información hasta el cliente).
 
 ![GitHub Figure2](../Imágenes/Figure2.png)
 Format:![Alt Tex](url)
 
-HTTP es un protocolo sin estado. En otras palabras, la solicitud actual no sabe lo que se ha hecho en las anteriores solicitudes.
+*HTTP es un protocolo sin estado. En otras palabras, la solicitud actual no sabe lo que se ha hecho en las anteriores solicitudes.
 
-HTTP permite la negociación de tipo de datos y representación, a fin de permitir que los sistemas que se construyan de forma independiente de los datos que se transfieren.
+*HTTP permite la negociación de tipo de datos y representación, a fin de permitir que los sistemas que se construyan de forma independiente de los datos que se transfieren.
 
-Citando el RFC2616: "El Protocolo de transferencia de hipertexto (HTTP) es un protocolo de nivel de aplicación para sistemas de información distribuidos de colaboración, hipermedia. Es un genérico sin estado, el protocolo, que se puede utilizar para muchas tareas más allá de su uso para el hipertexto, por ejemplo. como servidores de nombres y sistemas de gestión de objetos distribuidos, a través de la extensión de sus métodos de petición, códigos de error y los encabezados ".
+*Citando el RFC2616: "El Protocolo de transferencia de hipertexto (HTTP) es un protocolo de nivel de aplicación para sistemas de información distribuidos de colaboración, hipermedia. Es un genérico sin estado, el protocolo, que se puede utilizar para muchas tareas más allá de su uso para el hipertexto, por ejemplo. como servidores de nombres y sistemas de gestión de objetos distribuidos, a través de la extensión de sus métodos de petición, códigos de error y los encabezados ".
 
-Navegador
+**Navegador**
 
 Cada vez que se emite una dirección URL de su navegador para obtener un recurso web a través de HTTP, por ejemplo, http://www.nowhere123.com/index.html, el navegador vuelve la dirección URL en un mensaje de solicitud y la envía al servidor HTTP. El servidor HTTP interpreta el mensaje de petición, y le devuelve un mensaje de respuesta apropiada, que puede ser el recurso que ha solicitado o un mensaje de error. Este proceso se ilustra a continuación:
 
@@ -37,16 +35,16 @@ Cada vez que se emite una dirección URL de su navegador para obtener un recurso
 ![GitHub Figure3](../Imágenes/Figure3.png)
 Format:![Alt Tex](url)
 
-Localizador Uniforme de Recursos (URL)
+**Localizador Uniforme de Recursos (URL)**
 Un URL (Uniform Resource Locator) se utiliza para identificar de forma exclusiva un recurso a través de Internet. URL tiene la siguiente sintaxis:
 
 protocol://hostname:port/path-and-file-name
 
 Son 4 partes en una dirección URL:
-*item 1.* Protocolo: El protocolo de nivel de aplicación utilizada por el cliente y el servidor, por ejemplo, HTTP, FTP y telnet.
-*item 2.* Nombre de host: El nombre de dominio DNS (por ejemplo, www.nowhere123.com) o la dirección IP (por ejemplo, 192.128.1.2) del servidor.
-*item 3.* Puerto: el número de puerto TCP que el servidor está a la escucha de peticiones entrantes de los clientes.
-*item 4.* Ruta-y-file-name: El nombre y la ubicación del recurso solicitado, bajo el directorio base de documentos del servidor.
+1. Protocolo: El protocolo de nivel de aplicación utilizada por el cliente y el servidor, por ejemplo, HTTP, FTP y telnet.
+2. Nombre de host: El nombre de dominio DNS (por ejemplo, www.nowhere123.com) o la dirección IP (por ejemplo, 192.128.1.2) del servidor.
+3. Puerto: el número de puerto TCP que el servidor está a la escucha de peticiones entrantes de los clientes.
+4. Ruta-y-file-name: El nombre y la ubicación del recurso solicitado, bajo el directorio base de documentos del servidor.
 
 Por ejemplo, en la http://www.nowhere123.com/docs/index.html URL, el protocolo de comunicación es HTTP; el nombre de host es www.nowhere123.com. El número de puerto no se ha especificado en la URL, y adquiere el número predeterminado, que es el puerto TCP 80 para HTTP. La ruta y el nombre del archivo para el recurso que se encuentra es "/docs/index.html".
 Otros ejemplos de URL son:
@@ -59,6 +57,7 @@ telnet://www.nowhere123.com/
 
 **Protocolo HTTP**
 Como se ha mencionado, cada vez que se introduce una URL en el cuadro de dirección del navegador, el navegador traduce la dirección URL en un mensaje de solicitud de acuerdo con el protocolo especificado; y envía el mensaje de petición al servidor.
+
 Por ejemplo, el navegador tradujo el URL http://www.nowhere123.com/doc/index.html en el siguiente mensaje de petición de:
 
 GET /docs/index.html HTTP/1.1
@@ -70,9 +69,10 @@ User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
 (blank line)
 
 Cuando este mensaje de solicitud llega al servidor, el servidor puede tomar cualquiera de estas acciones:
-*item1.* El servidor interpreta la petición recibida, los mapas de la solicitud en un archivo en el directorio de documentos del servidor, y devuelve el archivo solicitado al cliente.
-*item2.* El servidor interpreta la petición recibida, los mapas de la solicitud en un programa guardado en el servidor, ejecuta el programa, y devuelve la salida del programa al cliente.
-*item3.* La solicitud no puede ser satisfecha, el servidor devuelve un mensaje de error.
+1. El servidor interpreta la petición recibida, los mapas de la solicitud en un archivo en el directorio de documentos del servidor, y devuelve el archivo solicitado al cliente.
+2. El servidor interpreta la petición recibida, los mapas de la solicitud en un programa guardado en el servidor, ejecuta el programa, y devuelve la salida del programa al cliente.
+3. La solicitud no puede ser satisfecha, el servidor devuelve un mensaje de error.
+
 Un ejemplo del mensaje de respuesta HTTP es como se muestra:
 
 HTTP/1.1 200 OK
@@ -89,13 +89,14 @@ X-Pad: avoid browser bug
 <html><body><h1>It works!</h1></body></html>
 
 El navegador recibe el mensaje de respuesta, interpreta el mensaje y muestra el contenido del mensaje en la ventana del navegador de acuerdo con el tipo de medio de la respuesta (como en la cabecera de respuesta Content-Type). Tipo de medios comunes incluyen "text / plain", "text / html", "image / gif", "image / jpeg", "audio / mpeg", "video / mpeg", "aplicación / pdf" y "application / pdf ".
+
 En su estado de reposo, un servidor HTTP no hace más que escuchar a la dirección (es) IP y el puerto (s) especificado en la configuración de solicitud entrante. Cuando llega una petición, el servidor analiza el encabezado del mensaje, aplica las reglas especificadas en la configuración, y toma la acción apropiada. El Control principal del webmaster sobre la acción del servidor web es a través de la configuración.
 
 **HTTP a través de TCP / IP**
 
 HTTP es un protocolo de nivel de aplicación cliente-servidor. Por lo general se ejecuta sobre una conexión TCP / IP, como se ilustra. (HTTP necesita no se ejecutan en TCP / IP. Sólo se presupone un transporte fiable. Cualquier protocolo de transporte que ofrecen tales garantías pueden ser utilizados.
 
-tHub Figure4](../Imágenes/Figure4.png)
+!Hub Figure4](../Imágenes/Figure4.png)
 Format:![Alt Tex](url)
 
 TCP / IP (Transmission Control Protocol / Internet Protocol) es un conjunto de protocolos de transporte y la capa de red de las máquinas se comuniquen entre sí a través de la red.
@@ -121,17 +122,14 @@ Servidor HTTP Apache es un servidor de producción industrial-fuerza popular, pr
 
 El primer servidor HTTP está escrito por Tim Berners Lee en el CERN (Centro Europeo de Investigación Nuclear) en Ginebra, Suiza, que también inventó HTML. Apache fue construido en NCSA (National Center for Supercomputing Applications, EE.UU.) "httpd 1.3" servidor, a principios de 1995. Apache probablemente recibe su nombre del hecho de que consiste en un código original (desde un servidor web httpd anterior NCSA) además de algunos parches; o del nombre de una tribu india americana.
 
-eaje de solicitud
-El formato de un mensaje de petición HTTP es como sigue:eer "Apache Cómo hacer" sobre cómo instalar y configurar el servidor Apache HTTP; o "Tomcat How-to" para instalar y empezar a trabajar con Apache Tomcat.
-
 **Solicitud HTTP y Mensajes de respuesta**
 
 Cliente HTTP y el servidor se comunican mediante el envío de mensajes de texto. El cliente envía un mensaje de petición al servidor. El servidor, a su vez, devuelve un mensaje de respuesta.
-Laje de solicitud
-El formato de un mensaje de petición HTTP es como sigue:n mensaje HTTP consta de una cabecera de mensaje y un cuerpo de mensaje opcional, separados por una línea en blanco, como se ilustra a continuación:
+
+El formato de un mensaje de petición HTTP consta de una cabecera de mensaje y un cuerpo de mensaje opcional, separados por una línea en blanco, como se ilustra a continuación:
 
 
-Hub Figure5](../Imágenes/Figure5.png)
+!Hub Figure5](../Imágenes/Figure5.png)
 Format:![Alt Tex](url)
 
 
@@ -139,28 +137,28 @@ HTTP mensaje de solicitud
 El formato de un mensaje de petición HTTP es como sigue:
 
 
-tHub Figure6](../Imágenes/Figure6.png)
+!Hub Figure6](../Imágenes/Figure6.png)
 Format:![Alt Tex](url)
 
-tHub Figure7](../Imágenes/Figure7.png)
+!Hub Figure7](../Imágenes/Figure7.png)
 Format:![Alt Tex](url)
 
-*Request Line*
+**Request Line**
 La primera línea de la cabecera se llama la línea de solicitud, seguido de las cabeceras de solicitud opcionales.
 La línea de solicitud tiene la siguiente sintaxis:
 
 request-method-name request-URI HTTP-version
 
-Solicitud-nombre-método: protocolo HTTP define un conjunto de métodos de petición, por ejemplo, GET, POST, HEAD, y OPCIONES. El cliente puede utilizar uno de estos métodos para enviar una petición al servidor.
-URI de solicitud: especifica el recurso solicitado.
-HTTP-version: Dos versiones están actualmente en uso: HTTP / 1.0 y HTTP / 1.1.
+* Solicitud-nombre-método: protocolo HTTP define un conjunto de métodos de petición, por ejemplo, GET, POST, HEAD, y OPCIONES. El cliente puede utilizar uno de estos métodos para enviar una petición al servidor.
+* URL de solicitud: especifica el recurso solicitado.
+* HTTP-version: Dos versiones están actualmente en uso: HTTP / 1.0 y HTTP / 1.1.
 
 Ejemplos de línea de solicitud son:
 GET /test.html HTTP/1.1
 HEAD /query.html HTTP/1.0
 POST /index.html HTTP/1.1
 
-Cabeceras de Petición
+**Cabeceras de Petición**
 Los encabezados de solicitud están en la forma del nombre: pares de valores. Los valores múltiples, separados por comas, se pueden especificar.
 
 request-header-name: request-header-value1, request-header-value2, ...
@@ -172,33 +170,28 @@ Connection: Keep-Alive
 Accept: image/gif, image/jpeg, */*
 Accept-Language: us-en, fr, cn
 
-Ejemplo
+**Ejemplo**
 A continuación se muestra un mensaje de petición HTTP de ejemplo:
 
-tHub Figure8](../Imágenes/Figure8.png)
-Format:![Alt Tex](url)
+!Hub Figure8](../Imágenes/Figure8.png)
+[Alt Tex](url)
 
-Mensaje de respuesta HTTP
+**Mensaje de respuesta HTTP**
 El formato del mensaje de respuesta HTTP es como sigue:
 
-tHub Figure9](../Imágenes/Figure9.png)
+!Hub Figure9](../Imágenes/Figure9.png)
 Format:![Alt Tex](url)
 
-Línea de estado
+**Línea de estado**
 La primera línea se llama la línea de estado, seguido de cabeceras de respuesta opcional).
 La línea de estado tiene la siguiente sintaxis:
 
-HTTP-version status-code reason-phrase
+* HTTP-version status-code reason-phrase
 
-HTTP versión: La versión de HTTP utilizada en esta sesión. HTTP / 1.0 y HTTP / 1.1.
+* HTTP versión: La versión de HTTP utilizada en esta sesión. HTTP / 1.0 y HTTP / 1.1.
 Código de estado: un número de 3 dígitos generado por el servidor para reflejar el resultado de la solicitud.
-Razón Frase: da una breve explicación para el código de estado.
-Código de estado común y la razón frase son "200 OK", "404 Not Found", "403 Prohibido", "500 Internal Server Error".
-
-
-
-
-
+* Razón Frase: da una breve explicación para el código de estado.
+* Código de estado común y la razón frase son "200 OK", "404 Not Found", "403 Prohibido", "500 Internal Server Error".
 
 Los ejemplos de línea de estado son:
 HTTP/1.1 200 OK
@@ -220,7 +213,7 @@ Keep-Alive: timeout=15, max=100
 El cuerpo del mensaje de respuesta contiene los datos de los recursos solicitados.
 
 
-tHub Figure10](../Imágenes/Figure10.png)
+!Hub Figure10](../Imágenes/Figure10.png)
 Format:![Alt Tex](url)
 
 

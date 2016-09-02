@@ -2,25 +2,22 @@
 
 ##Bases Esenciales
 
-*Introduccion*
+##Introduccion##
 
 **La WEB**
 
 Internet (o la web) es un sistema de informacion cliente/servidor de distribucion masiva como se muestra en el siguiente diagrama.
 
 ![Figure1](Figure1.png)
-Format:![Alt Tex](url)
-
 
 Muchas aplicaciones se estan ejecutando al mismo tiempo a traves de Internet, tales como la navegacion en internet, correo electronico, transferencia de arhivos, transmision de audio y video(streaming). Para que una comunicacion adecuada tenga lugar entre el cliente y el servidor, estas aplicaciones deben estar de acuerdo con un protocolo especifico de nivel de aplicacion como HTTP, FTP, SMTP, POP y  etc.
 
 **Protocolo de Transferencia de Hipertexto (HTTP)**
 
-HTTP (Protocolo de Transferencia de Hipertexto) es quizas el protocolo de aplicacion mas popular en Internet(o en la web).
+HTTP (Protocolo de Transferencia de Hipertexto) es quizas el protocolo de aplicacion mas popular en Internet (o en la web).
 * HTTP es un protocolo cliente-servidor de petición-respuesta asimétrica como se ilustra. Un cliente HTTP envía un mensaje de petición a un servidor HTTP. El servidor, a su vez, devuelve un mensaje de respuesta. En otras palabras, HTTP es un protocolo de extracción, el cliente extrae la información desde el servidor (en lugar de servidor empuja información hasta el cliente).
 
-![GitHub Figure2](../Imágenes/Figure2.png)
-Format:![Alt Tex](url)
+![Figure2](Figure2.png)
 
 * HTTP es un protocolo sin estado. En otras palabras, la solicitud actual no sabe lo que se ha hecho en las anteriores solicitudes.
 * HTTP permite la negociación de tipo de datos y representación, a fin de permitir que los sistemas que se construyan de forma independiente de los datos que se transfieren.
@@ -31,8 +28,7 @@ Format:![Alt Tex](url)
 Cada vez que se emite una dirección URL de su navegador para obtener un recurso web a través de HTTP, por ejemplo, http://www.nowhere123.com/index.html, el navegador vuelve la dirección URL en un mensaje de solicitud y la envía al servidor HTTP. El servidor HTTP interpreta el mensaje de petición, y le devuelve un mensaje de respuesta apropiada, que puede ser el recurso que ha solicitado o un mensaje de error. Este proceso se ilustra a continuación:
 
 
-![GitHub Figure3](../Imágenes/Figure3.png)
-Format:![Alt Tex](url)
+![Figure3](Figure3.png)
 
 **Localizador Uniforme de Recursos (URL)**
 
@@ -40,8 +36,7 @@ Un URL (Uniform Resource Locator) se utiliza para identificar de forma exclusiva
 
 protocol://hostname:port/path-and-file-name
 
-Son 4 partes en una dirección URL:
-
+Son 4 partes en una dirección URL:  
 1. Protocolo: El protocolo de nivel de aplicación utilizada por el cliente y el servidor, por ejemplo, HTTP, FTP y telnet.
 
 2. Nombre de host: El nombre de dominio DNS (por ejemplo, www.nowhere123.com) o la dirección IP (por ejemplo, 192.128.1.2) del servidor.
@@ -50,7 +45,8 @@ Son 4 partes en una dirección URL:
 
 4. Ruta-y-file-name: El nombre y la ubicación del recurso solicitado, bajo el directorio base de documentos del servidor.
 
-Por ejemplo, en la http://www.nowhere123.com/docs/index.html URL, el protocolo de comunicación es HTTP; el nombre de host es www.nowhere123.com. El número de puerto no se ha especificado en la URL, y adquiere el número predeterminado, que es el puerto TCP 80 para HTTP. La ruta y el nombre del archivo para el recurso que se encuentra es "/docs/index.html".
+Por ejemplo, en la http://www.nowhere123.com/docs/index.html URL, el protocolo de comunicación es HTTP; el nombre de host es www.nowhere123.com. El número de puerto no se ha especificado en la URL, y adquiere el número predeterminado, que es el puerto TCP 80 para HTTP. La ruta y el nombre del archivo para el recurso que se encuentra es "/docs/index.html".  
+
 Otros ejemplos de URL son:
 
 ftp://www.ftp.org/docs/test.txt  
@@ -104,10 +100,10 @@ En su estado de reposo, un servidor HTTP no hace más que escuchar a la direcci�
 
 HTTP es un protocolo de nivel de aplicación cliente-servidor. Por lo general se ejecuta sobre una conexión TCP / IP, como se ilustra. (HTTP necesita no se ejecutan en TCP / IP. Sólo se presupone un transporte fiable. Cualquier protocolo de transporte que ofrecen tales garantías pueden ser utilizados.
 
-![Hub Figure4](../Imágenes/Figure4.png)
-Format:![Alt Tex](url)
+![Figure4](Figure4.png)
 
 TCP / IP (Transmission Control Protocol / Internet Protocol) es un conjunto de protocolos de transporte y la capa de red de las máquinas se comuniquen entre sí a través de la red.
+
 IP (Internet Protocol) es un protocolo de capa de red, se ocupa de direccionamiento de red y enrutamiento. En una red IP, cada máquina se asigna una dirección IP única (por ejemplo, 165.1.2.3), y el software de IP es responsable de encaminar un mensaje desde la fuente de IP a la dirección IP de destino. En IPv4 (versión 4 de IP), la dirección IP se compone de 4 bytes, cada uno de los rangos de 0 a 255, separados por puntos, que se llama una forma de cuatro puntos. Este esquema de numeración soporta hasta 4G electrónico de la red. La última IPv6 (IP versión 6) soporta más direcciones. Desde memorizar el número es difícil para la mayoría de las personas, un nombre de dominio Inglés-como, como www.nowhere123.com se utiliza en su lugar. El DNS (Domain Name Service) traduce el nombre de dominio a la dirección IP (a través de tablas de búsqueda distribuidos). Una dirección IP 127.0.0.1 especial siempre se refiere a su propia máquina. Su nombre domian es "localhost" y puede ser utilizado para la prueba de bucle local.
 
 TCP (Protocolo de control de transmisión) es un protocolo de capa de transporte, responsable de establecer una conexión entre dos máquinas. TCP consta de 2 protocolos: TCP y UDP (Datagrama de paquete de usuarios). TCP es fiable, cada paquete tiene un número de secuencia, y se espera un acuse de recibo. Un paquete será retransmitido si no es recibida por el receptor. la entrega de paquetes está garantizada en TCP. UDP no garantiza la entrega de paquetes, y por lo tanto no es fiable. Sin embargo, UDP tiene menos sobrecarga de la red y se puede utilizar para aplicaciones tales como vídeo y audio streaming, donde la fiabilidad no es crítica.
@@ -137,27 +133,22 @@ Cliente HTTP y el servidor se comunican mediante el envío de mensajes de texto.
 El formato de un mensaje de petición HTTP consta de una cabecera de mensaje y un cuerpo de mensaje opcional, separados por una línea en blanco, como se ilustra a continuación:
 
 
-![Hub Figure5](../Imágenes/Figure5.png)
-Format:![Alt Tex](url)
-
+![Figure5](Figure5.png)
 
 **HTTP mensaje de solicitud**
 El formato de un mensaje de petición HTTP es como sigue:
 
 
-![Hub Figure6](../Imágenes/Figure6.png)
-Format:![Alt Tex](url)
+![Figure6](Figure6.png)
 
-![Hub Figure7](../Imágenes/Figure7.png)
-Format:![Alt Tex](url)
 
 **Request Line**
 
 La primera línea de la cabecera se llama la línea de solicitud, seguido de las cabeceras de solicitud opcionales.
+
 La línea de solicitud tiene la siguiente sintaxis:
 
 request-method-name request-URI HTTP-version  
-
 * Solicitud-nombre-método: protocolo HTTP define un conjunto de métodos de petición, por ejemplo, GET, POST, HEAD, y OPCIONES. El cliente puede utilizar uno de estos métodos para enviar una petición al servidor.
 * URL de solicitud: especifica el recurso solicitado.
 * HTTP-version: Dos versiones están actualmente en uso: HTTP / 1.0 y HTTP / 1.1.
@@ -184,15 +175,14 @@ Accept-Language: us-en, fr, cn
 
 A continuación se muestra un mensaje de petición HTTP de ejemplo:
 
-![Hub Figure8](../Imágenes/Figure8.png)
-[Alt Tex](url)
+![Figure7](Figure7.png)
 
 **Mensaje de respuesta HTTP**
 
 El formato del mensaje de respuesta HTTP es como sigue:
 
-![Hub Figure9](../Imágenes/Figure9.png)
-Format:![Alt Tex](url)
+![Figure8](Figure8.png)
+
 
 **Línea de estado**
 
@@ -232,9 +222,7 @@ El cuerpo del mensaje de respuesta contiene los datos de los recursos solicitado
 **Ejemplo**
 La imagen muestra la respuesta de la solicitud:
 
-![Hub Figure10](../Imágenes/Figure10.png)
-Format:![Alt Tex](url)
-
+![Hub Figure9](Figure9.png)
 
 
 

@@ -53,10 +53,10 @@ Son 4 partes en una dirección URL:
 Por ejemplo, en la http://www.nowhere123.com/docs/index.html URL, el protocolo de comunicación es HTTP; el nombre de host es www.nowhere123.com. El número de puerto no se ha especificado en la URL, y adquiere el número predeterminado, que es el puerto TCP 80 para HTTP. La ruta y el nombre del archivo para el recurso que se encuentra es "/docs/index.html".
 Otros ejemplos de URL son:
 
-ftp://www.ftp.org/docs/test.txt
-mailto:user@test101.com
-news:soc.culture.Singapore
-telnet://www.nowhere123.com/
+ftp://www.ftp.org/docs/test.txt  
+mailto:user@test101.com  
+news:soc.culture.Singapore  
+telnet://www.nowhere123.com/  
 
 
 **Protocolo HTTP**

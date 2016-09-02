@@ -54,11 +54,8 @@ Por ejemplo, en la http://www.nowhere123.com/docs/index.html URL, el protocolo d
 Otros ejemplos de URL son:
 
 ftp://www.ftp.org/docs/test.txt
-
 mailto:user@test101.com
-
 news:soc.culture.Singapore
-
 telnet://www.nowhere123.com/
 
 

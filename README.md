@@ -65,18 +65,13 @@ Como se ha mencionado, cada vez que se introduce una URL en el cuadro de direcci
 
 Por ejemplo, el navegador tradujo el URL http://www.nowhere123.com/doc/index.html en el siguiente mensaje de petición de:
 
-GET /docs/index.html HTTP/1.1
-
-Host: www.nowhere123.com
-
-Accept: image/gif, image/jpeg, */*
-
-Accept-Language: en-us
-
-Accept-Encoding: gzip, deflate
-
-User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
-(blank line)
+GET /docs/index.html HTTP/1.1  
+Host: www.nowhere123.com  
+Accept: image/gif, image/jpeg, */*  
+Accept-Language: en-us  
+Accept-Encoding: gzip, deflate  
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)  
+(blank line)  
 
 Cuando este mensaje de solicitud llega al servidor, el servidor puede tomar cualquiera de estas acciones:
 
@@ -88,27 +83,18 @@ Cuando este mensaje de solicitud llega al servidor, el servidor puede tomar cual
 
 Un ejemplo del mensaje de respuesta HTTP es como se muestra:
 
-HTTP/1.1 200 OK
-
-Date: Sun, 18 Oct 2009 08:56:53 GMT
-
-Server: Apache/2.2.14 (Win32)
-
-Last-Modified: Sat, 20 Nov 2004 07:16:26 GMT
-
-ETag: "10000000565a5-2c-3e94b66c2e680"
-
-Accept-Ranges: bytes
-
-Content-Length: 44
-
-Connection: close
-
-Content-Type: text/html
-
-X-Pad: avoid browser bug
+HTTP/1.1 200 OK  
+Date: Sun, 18 Oct 2009 08:56:53 GMT  
+Server: Apache/2.2.14 (Win32)  
+Last-Modified: Sat, 20 Nov 2004 07:16:26 GMT  
+ETag: "10000000565a5-2c-3e94b66c2e680"  
+Accept-Ranges: bytes  
+Content-Length: 44  
+Connection: close  
+Content-Type: text/html  
+X-Pad: avoid browser bug  
   
-<html><body><h1>It works!</h1></body></html>
+<html><body><h1>It works!</h1></body></html>  
 
 El navegador recibe el mensaje de respuesta, interpreta el mensaje y muestra el contenido del mensaje en la ventana del navegador de acuerdo con el tipo de medio de la respuesta (como en la cabecera de respuesta Content-Type). Tipo de medios comunes incluyen "text / plain", "text / html", "image / gif", "image / jpeg", "audio / mpeg", "video / mpeg", "aplicación / pdf" y "application / pdf ".
 
@@ -170,7 +156,7 @@ Format:![Alt Tex](url)
 La primera línea de la cabecera se llama la línea de solicitud, seguido de las cabeceras de solicitud opcionales.
 La línea de solicitud tiene la siguiente sintaxis:
 
-request-method-name request-URI HTTP-version
+request-method-name request-URI HTTP-version  
 
 * Solicitud-nombre-método: protocolo HTTP define un conjunto de métodos de petición, por ejemplo, GET, POST, HEAD, y OPCIONES. El cliente puede utilizar uno de estos métodos para enviar una petición al servidor.
 * URL de solicitud: especifica el recurso solicitado.
@@ -178,28 +164,21 @@ request-method-name request-URI HTTP-version
 
 Ejemplos de línea de solicitud son:
 
-GET /test.html HTTP/1.1
-
-HEAD /query.html HTTP/1.0
-
-POST /index.html HTTP/1.1
+GET /test.html HTTP/1.1  
+HEAD /query.html HTTP/1.0  
+POST /index.html HTTP/1.1  
 
 **Cabeceras de Petición**
 
 Los encabezados de solicitud están en la forma del nombre: pares de valores. Los valores múltiples, separados por comas, se pueden especificar.
 
-request-header-name: request-header-value1, request-header-value2, ...
+request-header-name: request-header-value1, request-header-value2, ...  
 
 Los ejemplos de los encabezados de solicitud son:
-
-Host: www.xyz.com
-
-Connection: Keep-Alive
-
-Accept: image/gif, image/jpeg, */*
-
-Accept-Language: us-en, fr, cn
-
+Host: www.xyz.com  
+Connection: Keep-Alive  
+Accept: image/gif, image/jpeg, */*  
+Accept-Language: us-en, fr, cn  
 
 **Ejemplo**
 
@@ -220,7 +199,7 @@ Format:![Alt Tex](url)
 La primera línea se llama la línea de estado, seguido de cabeceras de respuesta opcional).
 La línea de estado tiene la siguiente sintaxis:
 
-* HTTP-version status-code reason-phrase
+* HTTP-version status-code reason-phrase  
 
 * HTTP versión: La versión de HTTP utilizada en esta sesión. HTTP / 1.0 y HTTP / 1.1.
 Código de estado: un número de 3 dígitos generado por el servidor para reflejar el resultado de la solicitud.
@@ -231,30 +210,27 @@ Código de estado: un número de 3 dígitos generado por el servidor para reflej
 
 Los ejemplos de línea de estado son:
 
-HTTP/1.1 200 OK
-
-HTTP/1.0 404 Not Found
-
-HTTP/1.1 403 Forbidden
+HTTP/1.1 200 OK  
+HTTP/1.0 404 Not Found  
+HTTP/1.1 403 Forbidden  
 
 **Encabezados de Respuesta**
 
 Las cabeceras de respuesta están en la forma nombre: pares de valores:
 
-response-header-name: response-header-value1, response-header-value2, ...
+response-header-name: response-header-value1, response-header-value2, ... 
 
 Los ejemplos de cabeceras de respuesta son:
 
-Content-Type: text/html
-
-Content-Length: 35
-
-Connection: Keep-Alive
-
-Keep-Alive: timeout=15, max=100
+Content-Type: text/html  
+Content-Length: 35  
+Connection: Keep-Alive  
+Keep-Alive: timeout=15, max=100  
 
 El cuerpo del mensaje de respuesta contiene los datos de los recursos solicitados.
 
+**Ejemplo**
+La imagen muestra la respuesta de la solicitud:
 
 ![Hub Figure10](../Imágenes/Figure10.png)
 Format:![Alt Tex](url)

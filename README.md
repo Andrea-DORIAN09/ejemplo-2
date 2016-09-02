@@ -8,9 +8,6 @@
 
 Internet (o la web) es un sistema de informacion cliente/servidor de distribucion masiva como se muestra en el siguiente diagrama.
 
-![Figure1][1]
-[1]:Figure1.png
-
 ![GitHub Figure1](../Imágenes/Figure1.png)
 Format:![Alt Tex](url)
 

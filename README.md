@@ -227,6 +227,7 @@ La imagen muestra la respuesta de la solicitud:
 ![Hub Figure9](Figure9.png)
 
 **HTTP Request Métodos**
+
 El protocolo HTTP define un conjunto de métodos de petición. Un cliente puede utilizar uno de estos métodos de petición para enviar un mensaje de petición a un servidor HTTP. Los métodos son:
 
 * GET: Un cliente puede utilizar la solicitud GET para obtener un recurso web desde el servidor.
@@ -247,6 +248,7 @@ El protocolo HTTP define un conjunto de métodos de petición. Un cliente puede 
 
 
 **"GET" Método de solicitud**
+
 GET es el método más común de solicitud HTTP. Un cliente puede utilizar el método GET para solicitar (o "get"), para una pieza de recursos desde un servidor HTTP. Un mensaje de petición GET toma la siguiente sintaxis:
 
 GET request-URI HTTP-version
@@ -265,9 +267,11 @@ GET request-URI HTTP-version
 * GET mensaje de solicitud tiene un cuerpo de solicitud opcional que contiene la cadena de consulta (que se explica más adelante).
 
 **Las solicitudes HTTP de pruebas**
+
 Hay muchas maneras de poner a prueba las peticiones HTTP. Se puede utilizar el programa de utilidad como "telnet" o "Hyperterm" (búsqueda de "telnet.exe" o "hypertrm.exe" en c: \ windows), o escribir el propietario programa de la red para enviar mensaje de solicitud de prima a un servidor HTTP para poner a prueba las diversas peticiones HTTP.
 
 **Telnet**
+
 "Telnet" es una utilidad muy útil la creación de redes. Puede utilizar telnet para establecer una conexión TCP con un servidor; y emitir solicitudes HTTP primas. Por ejemplo, suponga que ha comenzado su servidor HTTP en la máquina local (la dirección IP 127.0.0.1) en el puerto 8000:
 
 > telnet
@@ -282,6 +286,7 @@ GET /index.html HTTP/1.0
 Telnet es un protocolo basado en caracteres. Cada caracter se introduce en el cliente telnet se enviará inmediatamente al servidor. Por lo tanto, no se puede hacer error error tipográfico en entrar te mando prima, como borrar y la tecla de retroceso se envía al servidor. Puede que tenga que activar la opción de "eco local" para ver los caracteres que ingresa. Consulte el manual de telnet (ayuda de búsqueda de Windows ') para obtener más información sobre el uso de telnet.
 
 **Programa de la red**
+
 También puede escribir su propio programa de red para emitir petición HTTP prima a un servidor HTTP. Tu programa de la red deberá establecer primero una conexión TCP / IP con el servidor. Una vez establecida la conexión TCP, puede emitir la solicitud de prima.
 
 Un ejemplo de programa de la red está escrito en Java es como se muestra (suponiendo que el servidor HTTP se ejecuta en el localhost 127.0.0.1 dirección (IP) en el puerto 8000):
@@ -318,6 +323,7 @@ public class HttpClient {
 }
 
 **Solicitud HTTP / 1.0 GET**
+
 A continuación se muestra la respuesta de una petición HTTP / 1.0 GET (tema a través de telnet o en su propio programa de la red - suponiendo que haya comenzado su servidor HTTP):
 
 GET /index.html HTTP/1.0

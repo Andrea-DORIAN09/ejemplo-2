@@ -1,8 +1,9 @@
-##HTTP (Protocolo de Tranferencia de Hipertexto)
+###HTTP (Protocolo de Tranferencia de Hipertexto)
 
-##Bases Esenciales
+###Bases Esenciales
 
-##Introduccion##
+
+**Introduccion**
 
 **La WEB**
 
@@ -11,6 +12,7 @@ Internet (o la web) es un sistema de informacion cliente/servidor de distribucio
 ![Figure1](Figure1.png)
 
 Muchas aplicaciones se estan ejecutando al mismo tiempo a traves de Internet, tales como la navegacion en internet, correo electronico, transferencia de arhivos, transmision de audio y video(streaming). Para que una comunicacion adecuada tenga lugar entre el cliente y el servidor, estas aplicaciones deben estar de acuerdo con un protocolo especifico de nivel de aplicacion como HTTP, FTP, SMTP, POP y  etc.
+
 
 **Protocolo de Transferencia de Hipertexto (HTTP)**
 
@@ -23,12 +25,13 @@ HTTP (Protocolo de Transferencia de Hipertexto) es quizas el protocolo de aplica
 * HTTP permite la negociación de tipo de datos y representación, a fin de permitir que los sistemas que se construyan de forma independiente de los datos que se transfieren.
 * Citando el RFC2616: "El Protocolo de transferencia de hipertexto (HTTP) es un protocolo de nivel de aplicación para sistemas de información distribuidos de colaboración, hipermedia. Es un genérico sin estado, el protocolo, que se puede utilizar para muchas tareas más allá de su uso para el hipertexto, por ejemplo. como servidores de nombres y sistemas de gestión de objetos distribuidos, a través de la extensión de sus métodos de petición, códigos de error y los encabezados ".
 
+
 **Navegador**
 
 Cada vez que se emite una dirección URL de su navegador para obtener un recurso web a través de HTTP, por ejemplo, http://www.nowhere123.com/index.html, el navegador vuelve la dirección URL en un mensaje de solicitud y la envía al servidor HTTP. El servidor HTTP interpreta el mensaje de petición, y le devuelve un mensaje de respuesta apropiada, que puede ser el recurso que ha solicitado o un mensaje de error. Este proceso se ilustra a continuación:
 
-
 ![Figure3](Figure3.png)
+
 
 **Localizador Uniforme de Recursos (URL)**
 
@@ -36,7 +39,7 @@ Un URL (Uniform Resource Locator) se utiliza para identificar de forma exclusiva
 
 protocol://hostname:port/path-and-file-name
 
-Son 4 partes en una dirección URL:  
+Son 4 partes en una dirección URL:
 1. Protocolo: El protocolo de nivel de aplicación utilizada por el cliente y el servidor, por ejemplo, HTTP, FTP y telnet.
 
 2. Nombre de host: El nombre de dominio DNS (por ejemplo, www.nowhere123.com) o la dirección IP (por ejemplo, 192.128.1.2) del servidor.
@@ -45,14 +48,14 @@ Son 4 partes en una dirección URL:
 
 4. Ruta-y-file-name: El nombre y la ubicación del recurso solicitado, bajo el directorio base de documentos del servidor.
 
-Por ejemplo, en la http://www.nowhere123.com/docs/index.html URL, el protocolo de comunicación es HTTP; el nombre de host es www.nowhere123.com. El número de puerto no se ha especificado en la URL, y adquiere el número predeterminado, que es el puerto TCP 80 para HTTP. La ruta y el nombre del archivo para el recurso que se encuentra es "/docs/index.html".  
+Por ejemplo, en la http://www.nowhere123.com/docs/index.html URL, el protocolo de comunicación es HTTP; el nombre de host es www.nowhere123.com. El número de puerto no se ha especificado en la URL, y adquiere el número predeterminado, que es el puerto TCP 80 para HTTP. La ruta y el nombre del archivo para el recurso que se encuentra es "/docs/index.html".
 
 Otros ejemplos de URL son:
 
-ftp://www.ftp.org/docs/test.txt  
-mailto:user@test101.com  
-news:soc.culture.Singapore  
-telnet://www.nowhere123.com/  
+ftp://www.ftp.org/docs/test.txt 
+mailto:user@test101.com 
+news:soc.culture.Singapore 
+telnet://www.nowhere123.com/ 
 
 
 **Protocolo HTTP**
@@ -61,13 +64,13 @@ Como se ha mencionado, cada vez que se introduce una URL en el cuadro de direcci
 
 Por ejemplo, el navegador tradujo el URL http://www.nowhere123.com/doc/index.html en el siguiente mensaje de petición de:
 
-GET /docs/index.html HTTP/1.1  
-Host: www.nowhere123.com  
-Accept: image/gif, image/jpeg, */*  
-Accept-Language: en-us  
-Accept-Encoding: gzip, deflate  
-User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)  
-(blank line)  
+GET /docs/index.html HTTP/1.1 
+Host: www.nowhere123.com 
+Accept: image/gif, image/jpeg, */* 
+Accept-Language: en-us 
+Accept-Encoding: gzip, deflate 
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1) 
+(blank line) 
 
 Cuando este mensaje de solicitud llega al servidor, el servidor puede tomar cualquiera de estas acciones:
 
@@ -79,24 +82,25 @@ Cuando este mensaje de solicitud llega al servidor, el servidor puede tomar cual
 
 Un ejemplo del mensaje de respuesta HTTP es como se muestra:
 
-HTTP/1.1 200 OK  
-Date: Sun, 18 Oct 2009 08:56:53 GMT  
-Server: Apache/2.2.14 (Win32)  
-Last-Modified: Sat, 20 Nov 2004 07:16:26 GMT  
-ETag: "10000000565a5-2c-3e94b66c2e680"  
-Accept-Ranges: bytes  
-Content-Length: 44  
-Connection: close  
-Content-Type: text/html  
-X-Pad: avoid browser bug  
+HTTP/1.1 200 OK
+Date: Sun, 18 Oct 2009 08:56:53 GMT
+Server: Apache/2.2.14 (Win32)
+Last-Modified: Sat, 20 Nov 2004 07:16:26 GMT
+ETag: "10000000565a5-2c-3e94b66c2e680"
+Accept-Ranges: bytes 
+Content-Length: 44
+Connection: close
+Content-Type: text/html
+X-Pad: avoid browser bug
 
-```html  
-<html><body><h1>It works!</h1></body></html>  
+```html
+<html><body><h1>It works!</h1></body></html>
 ```
 
 El navegador recibe el mensaje de respuesta, interpreta el mensaje y muestra el contenido del mensaje en la ventana del navegador de acuerdo con el tipo de medio de la respuesta (como en la cabecera de respuesta Content-Type). Tipo de medios comunes incluyen "text / plain", "text / html", "image / gif", "image / jpeg", "audio / mpeg", "video / mpeg", "aplicación / pdf" y "application / pdf ".
 
 En su estado de reposo, un servidor HTTP no hace más que escuchar a la dirección (es) IP y el puerto (s) especificado en la configuración de solicitud entrante. Cuando llega una petición, el servidor analiza el encabezado del mensaje, aplica las reglas especificadas en la configuración, y toma la acción apropiada. El Control principal del webmaster sobre la acción del servidor web es a través de la configuración.
+
 
 **HTTP a través de TCP / IP**
 
@@ -116,6 +120,7 @@ A pesar de que el puerto TCP 80 es pre-asignado a HTTP, como el número de puert
 
 En resumen, para comunicarse a través de TCP / IP, lo que necesita saber (a) la dirección IP o el nombre de host, (b) Número de puerto.
 
+
 **Especificaciones HTTP**
 
 La especificación HTTP se mantiene por el W3C (Consorcio Mundial Web) y disponible en http://www.w3.org/standards/techs/http. Actualmente hay dos versiones de HTTP, es decir, HTTP / 1.0 y HTTP / 1.1. La versión original, HTTP / 0.9 (1991), escrito por Tim Berners-Lee, es un protocolo simple de transferencia de datos en bruto a través de Internet. HTTP / 1.0 (1996) (definido en RFC 1945), ha mejorado el protocolo permitiendo mensajes MIME-como. HTTP / 1.0 no se ocupa de los problemas de servidores proxy, almacenamiento en caché de conexión persistente, hosts virtuales, y el rango de descarga. Estas características se proporcionan en HTTP / 1.1 (1999) (definido en RFC 2616).
@@ -128,18 +133,18 @@ Servidor HTTP Apache es un servidor de producción industrial-fuerza popular, pr
 
 El primer servidor HTTP está escrito por Tim Berners Lee en el CERN (Centro Europeo de Investigación Nuclear) en Ginebra, Suiza, que también inventó HTML. Apache fue construido en NCSA (National Center for Supercomputing Applications, EE.UU.) "httpd 1.3" servidor, a principios de 1995. Apache probablemente recibe su nombre del hecho de que consiste en un código original (desde un servidor web httpd anterior NCSA) además de algunos parches; o del nombre de una tribu india americana.
 
+
 **Solicitud HTTP y Mensajes de respuesta**
 
 Cliente HTTP y el servidor se comunican mediante el envío de mensajes de texto. El cliente envía un mensaje de petición al servidor. El servidor, a su vez, devuelve un mensaje de respuesta.
 
 El formato de un mensaje de petición HTTP consta de una cabecera de mensaje y un cuerpo de mensaje opcional, separados por una línea en blanco, como se ilustra a continuación:
 
-
 ![Figure5](Figure5.png)
+
 
 **HTTP mensaje de solicitud**
 El formato de un mensaje de petición HTTP es como sigue:
-
 
 ![Figure6](Figure6.png)
 
@@ -150,34 +155,37 @@ La primera línea de la cabecera se llama la línea de solicitud, seguido de las
 
 La línea de solicitud tiene la siguiente sintaxis:
 
-request-method-name request-URI HTTP-version  
+request-method-name request-URI HTTP-version
 * Solicitud-nombre-método: protocolo HTTP define un conjunto de métodos de petición, por ejemplo, GET, POST, HEAD, y OPCIONES. El cliente puede utilizar uno de estos métodos para enviar una petición al servidor.
 * URL de solicitud: especifica el recurso solicitado.
 * HTTP-version: Dos versiones están actualmente en uso: HTTP / 1.0 y HTTP / 1.1.
 
 Ejemplos de línea de solicitud son:
 
-GET /test.html HTTP/1.1  
-HEAD /query.html HTTP/1.0  
-POST /index.html HTTP/1.1  
+GET /test.html HTTP/1.1
+HEAD /query.html HTTP/1.0
+POST /index.html HTTP/1.1
+
 
 **Cabeceras de Petición**
 
 Los encabezados de solicitud están en la forma del nombre: pares de valores. Los valores múltiples, separados por comas, se pueden especificar.
 
-request-header-name: request-header-value1, request-header-value2, ...  
+request-header-name: request-header-value1, request-header-value2, ...
 
 Los ejemplos de los encabezados de solicitud son:
-Host: www.xyz.com  
-Connection: Keep-Alive  
-Accept: image/gif, image/jpeg, */*  
-Accept-Language: us-en, fr, cn  
+Host: www.xyz.com
+Connection: Keep-Alive
+Accept: image/gif, image/jpeg, */*
+Accept-Language: us-en, fr, cn
+
 
 **Ejemplo**
 
 A continuación se muestra un mensaje de petición HTTP de ejemplo:
 
 ![Figure7](Figure7.png)
+
 
 **Mensaje de respuesta HTTP**
 
@@ -191,7 +199,7 @@ El formato del mensaje de respuesta HTTP es como sigue:
 La primera línea se llama la línea de estado, seguido de cabeceras de respuesta opcional).
 La línea de estado tiene la siguiente sintaxis:
 
-* HTTP-version status-code reason-phrase  
+* HTTP-version status-code reason-phrase
 
 * HTTP versión: La versión de HTTP utilizada en esta sesión. HTTP / 1.0 y HTTP / 1.1.
 Código de estado: un número de 3 dígitos generado por el servidor para reflejar el resultado de la solicitud.
@@ -202,9 +210,10 @@ Código de estado: un número de 3 dígitos generado por el servidor para reflej
 
 Los ejemplos de línea de estado son:
 
-HTTP/1.1 200 OK  
-HTTP/1.0 404 Not Found  
-HTTP/1.1 403 Forbidden  
+HTTP/1.1 200 OK
+HTTP/1.0 404 Not Found
+HTTP/1.1 403 Forbidden
+
 
 **Encabezados de Respuesta**
 
@@ -214,17 +223,19 @@ response-header-name: response-header-value1, response-header-value2, ...
 
 Los ejemplos de cabeceras de respuesta son:
 
-Content-Type: text/html  
-Content-Length: 35  
-Connection: Keep-Alive  
-Keep-Alive: timeout=15, max=100  
+Content-Type: text/html
+Content-Length: 35
+Connection: Keep-Alive
+Keep-Alive: timeout=15, max=100 
 
 El cuerpo del mensaje de respuesta contiene los datos de los recursos solicitados.
+
 
 **Ejemplo**
 La imagen muestra la respuesta de la solicitud:
 
 ![Hub Figure9](Figure9.png)
+
 
 **HTTP Request Métodos**
 
@@ -266,9 +277,11 @@ GET request-URI HTTP-version
 
 * GET mensaje de solicitud tiene un cuerpo de solicitud opcional que contiene la cadena de consulta (que se explica más adelante).
 
+
 **Las solicitudes HTTP de pruebas**
 
 Hay muchas maneras de poner a prueba las peticiones HTTP. Se puede utilizar el programa de utilidad como "telnet" o "Hyperterm" (búsqueda de "telnet.exe" o "hypertrm.exe" en c: \ windows), o escribir el propietario programa de la red para enviar mensaje de solicitud de prima a un servidor HTTP para poner a prueba las diversas peticiones HTTP.
+
 
 **Telnet**
 
@@ -284,6 +297,7 @@ GET /index.html HTTP/1.0
 ... HTTP response message ...
 
 Telnet es un protocolo basado en caracteres. Cada caracter se introduce en el cliente telnet se enviará inmediatamente al servidor. Por lo tanto, no se puede hacer error error tipográfico en entrar te mando prima, como borrar y la tecla de retroceso se envía al servidor. Puede que tenga que activar la opción de "eco local" para ver los caracteres que ingresa. Consulte el manual de telnet (ayuda de búsqueda de Windows ') para obtener más información sobre el uso de telnet.
+
 
 **Programa de la red**
 
@@ -322,6 +336,7 @@ public class HttpClient {
    }
 }
 
+
 **Solicitud HTTP / 1.0 GET**
 
 A continuación se muestra la respuesta de una petición HTTP / 1.0 GET (tema a través de telnet o en su propio programa de la red - suponiendo que haya comenzado su servidor HTTP):
@@ -340,12 +355,11 @@ Connection: close
 Content-Type: text/html
 X-Pad: avoid browser bug
 
-```html    
+```html
 <html><body><h1>It works!</h1></body></html>
 ```
 
 Connection to host lost.
-
 
 En este ejemplo, el cliente envía una solicitud GET para pedir un documento llamado "index.html"; y negocia utilizar HTTP / 1.0 protocolo. Se necesita una línea en blanco después de la cabecera de la solicitud. Este mensaje de petición no contiene un cuerpo.
 
@@ -358,6 +372,7 @@ Notas:
 * Si no existe la URI de solicitud, el servidor devolverá un mensaje de error "404 Not Found". Usted tiene que emitir una adecuada URL de solicitud, a partir de la raíz del documento "/". De lo contrario, el servidor devolverá un mensaje de error "400 Bad Request".
 * Si la versión de HTTP o es incorrecto, el servidor devolverá un mensaje de error "400 Bad Request".
 * En HTTP / 1.0, de forma predeterminada, el servidor cierra la conexión TCP después de que se entregó la respuesta. Si utiliza telnet para conectarse al servidor, el mensaje "conexión al host perdido" aparece inmediatamente después que se recibe el cuerpo de la respuesta. Se podría utilizar un encabezado de solicitud "Conexión: Keep-Alive" opcional a la solicitud de una persistente (o de mantenimiento de conexión) de conexión, por lo que otra petición puede ser enviada a través de la misma conexión TCP para lograr una mejor eficiencia de la red. Por otro lado, utiliza HTTP / 1.1 keep-alive conexión como predeterminada.
+
 
 **Respuesta Código de estado**
 
@@ -388,6 +403,7 @@ Algunos códigos de estado se encuentran comúnmente son:
 * 503 Servicio no disponible: El servidor no puede respuesta debido a una sobrecarga o mantenimiento. El cliente puede volver a intentarlo más tarde.
 * 504 Tiempo de espera de puerta de enlace: proxy o puerta de enlace indica que se recibe un tiempo de espera de un servidor ascendente.
 
+
 **Más HTTP / 1.0 petición GET ejemplos**
 
 **Ejemplo: Método de solicitud misspelt**
@@ -415,7 +431,6 @@ Content-Type: text/html; charset=iso-8859-1
 </body></html>
 
 
-
 **Ejemplo: 404 Archivo no encontrado**
 
 En esta solicitud GET, la solicitud de URL "/t.html" no se puede encontrar en el directorio de documentos del servidor. El servidor devuelve un error "404 Not Found".
@@ -437,6 +452,7 @@ Content-Type: text/html; charset=iso-8859-1
 <h1>Not Found</h1>
 <p>The requested URL /t.html was not found on this server.</p>
 </body></html>
+
 
 **Ejemplo: HTTP incorrecto número de versión**
 
@@ -508,13 +524,13 @@ Content-Type: text/html
 ```html 
 <html><body><h1>It works!</h1></body></html>
 ```
-
 Notas:
 
 * El mensaje "Conexión a host perdida" (para telnet) aparece después de "keep-alive" tiempo de espera.
 * Antes de la "conexión al host perdido" mensaje aparece (es decir, mantenimiento de conexión de tiempo de espera), puede enviar una nueva solicitud a través de la misma conexión TCP.
 * El encabezado "Conexión: keep-alive" no distingue entre mayúsculas y minúsculas. El espacio es opcional.
 * Si una cabecera opcional está mal escrito o no válido, se omite en el servidor.
+
 
 **Ejemplo: Cómo acceder a un recurso protegido**
 
@@ -545,6 +561,7 @@ Content-Type: text/html; charset=iso-8859-1
 on this server.</p>
 </body></html>
 
+
 **Solicitud HTTP / 1.1 GET**
 
 Servidor HTTP / 1.1 es compatible con las llamadas máquinas virtuales. Es decir, el mismo servidor físico podría albergar varios hosts virtuales, con diferentes nombres de host (por ejemplo, www.nowhere123.com y www.test909.com) y sus propios directorios raíz de documentos dedicados. Por lo tanto, en una petición HTTP / 1.1 GET, es obligatorio incluir un encabezado de solicitud llamado "host", para seleccionar uno de los hosts virtuales.
@@ -569,6 +586,7 @@ Content-Type: text/html
 <html><body><h1>It works!</h1></body></html>
 ```
 
+
 **Ejemplo: HTTP / 1.1 Falta el Encabezado de Host**
 
 El siguiente ejemplo muestra que "host" de cabecera es obligatoria en un HTTP / 1.1 petición. Si "Host" de cabecera se encuentra, el servidor devuelve un error "400 Bad Request".
@@ -592,6 +610,7 @@ Content-Type: text/html; charset=iso-8859-1
 </p>
 </body></html>
 
+
 **Las peticiones GET condicionales**
 
 En todos los ejemplos anteriores, el servidor devuelve todo el documento si la petición puede ser satisfecha (es decir incondicional). Es posible utilizar encabezado de la solicitud adicional para emitir una "solicitud condicional". Por ejemplo, para que solicite el documento basado en la fecha de última modificación (a fin de decidir si utilizar la copia caché local), o para pedir una parte del documento (o rango) en lugar de todo el documento (útil para la descarga de documentos de gran tamaño).
@@ -603,6 +622,7 @@ Los encabezados de solicitud condicional incluyen:
 * Si-Partido
 * Si-Ningun-Partido
 * Si-Rango
+
 
 **Cabeceras de petición**
 
@@ -675,6 +695,7 @@ Content-Type: text/html; charset=iso-8859-1
 
 La mayor parte del navegador seguirá con otra petición de "/ testdir /". Por ejemplo, si emite http://127.0.0.1:8000/testdir sin el arrastre "/" de un navegador, se puede notar que una "/" se añadió a la dirección después de que se le dio la respuesta. La moral de la historia es: usted debe incluir la solicitud "/" para el directorio para ahorrarle una solicitud GET adicional.
 
+
 **Una petición GET a través de un servidor proxy**
 
 Para enviar una petición GET a través de un servidor proxy, (a) establecer una conexión TCP con el servidor proxy; (B) utilizar un absoluto URI de solicitud http: // nombre de host: puerto / ruta / nombre de archivo en el servidor de destino.
@@ -740,6 +761,7 @@ X-Pad: avoid browser bug
 
 Observe que la respuesta consiste en la cabecera sólo que sin el cuerpo, que contiene el documento real.
 
+
 **"OPCIONES" método de la petición**
 
 Un cliente puede utilizar un método de petición OPCIONES para consultar el servidor en el que se apoyan los métodos de petición. La sintaxis de mensaje de solicitud de OPCIONES es:
@@ -749,6 +771,7 @@ OPTIONS request-URI|* HTTP-version
 (blank line)
 
 "*" Se puede utilizar en lugar de un URL de solicitud para indicar que la solicitud no se aplica a cualquier recurso en particular.
+
 
 **Ejemplo**
 
@@ -781,7 +804,8 @@ Solicitud de rastreo toma la siguiente sintaxis:
  TRACE / HTTP-version
 (blank line)
 
-Ejemplo
+
+**Ejemplo**
 
 El siguiente ejemplo muestra una petición TRACE emitida a través de un servidor proxy.
 
@@ -886,6 +910,7 @@ Usando solicitud GET para enviar la cadena de consulta tiene los siguientes inco
 
 método POST supera estos inconvenientes. Si se utiliza el método solicitud POST, la cadena de consulta se enviará en el cuerpo del mensaje de solicitud, donde la cantidad no está limitada. La solicitud cabeceras Content-Type y Content-Length se utilizan para notificar al servidor el tipo y la longitud de la cadena de consulta. La cadena de consulta no aparecerá en el cuadro de dirección del navegador. El método POST se discutirá más adelante.
 
+
 **Ejemplo**
 
 La siguiente formulario HTML se utiliza para recopilar el nombre de usuario y contraseña en un menú de inicio de sesión.
@@ -942,6 +967,7 @@ mailto:user@test101.com
 news:soc.culture.Singapore
 telnet://www.nowhere123.com/
 
+
 **URL codificada**
 
 URL no puede contener caracteres especiales, como blanco o '~'. Los caracteres especiales se codifican, en forma de %xx, donde xx es el código ASCII hexadecimal. Por ejemplo, '~' se codifica como %7e; '+' se codifica como %2b. Un espacio en blanco puede ser codificado como %20 o '+'. La dirección URL después de la codificación se llama URL codificada.
@@ -957,6 +983,7 @@ http://host:port/path?request-parameters#nameAnchor
 * El #nameAnchor identifica un fragmento dentro del documento HTML, que se define a través de la etiqueta de enlace <a name="anchor Name"> ... </a>.
 
 * Reescritura de URL para la gestión de la sesión, por ejemplo, "...; Id.sesión = xxxxxx".
+
 
 **"POST" Método de la Petición**
 
@@ -1009,6 +1036,7 @@ User=Peter+Lee&pw=123456&action=login
 
 Tenga en cuenta que la cabecera Content-Type informa al servidor los datos se codifican en URL (con un tipo MIME especial application / x-www-form-urlencoded), y la cabecera Content-Length indica al servidor el número de bytes que se lee en el mensaje cuerpo.
 
+
 **POSTAL vs GET para la presentación de formularios de datos**
 
 Como se mencionó en la sección anterior, solicitud POST tiene las siguientes ventajas en comparación con la solicitud GET en el envío de la cadena de consulta:
@@ -1023,7 +1051,7 @@ Tenga en cuenta que aunque la contraseña no se muestra en el cuadro de direcci�
 
 "RFC 1867 basado en Forma carga de archivos en HTML" especifica un archivo se puede cargar en el servidor mediante una petición POST de un formulario HTML. Un nuevo tipo de atributo = "archivo" se añadió a la etiqueta <input> de <form> HTML para soportar la carga de archivos. Los datos de la POST de carga de archivos no está codificada en URL (en el estándar application / x-www-form-urlencoded), pero utiliza un nuevo tipo MIME multipart / form-data.
 
-Ejemplo
+**Ejemplo**
 
 La siguiente formulario HTML puede ser utilizado para la carga de archivos:
 
@@ -1040,7 +1068,7 @@ La siguiente formulario HTML puede ser utilizado para la carga de archivos:
 </body>
 </html>
 
-![Hub Figure11](Figure11.png)
+![Hub Figure12](Figure12.png)
 
 Cuando el navegador encuentra una etiqueta <input> con el atributo de tipo "archivo" =, se muestra un cuadro de texto y un "... Examinar", para permitir al usuario elegir el archivo para ser cargado.
 
@@ -1071,11 +1099,13 @@ Peter Lee
 
 Servlet 3.0 proporciona soporte integrado para la carga de archivos de procesamiento. Leer "Carga de archivos en Servlet 3.0".
 
+
 **"CONNECT" método de la petición**
 
 La solicitud de conexión HTTP se utiliza para pedir un proxy para establecer una conexión con anteras de acogida y simplemente retransmitir el contenido, en lugar de intentar analizar o almacenar en caché el mensaje. Esto a menudo se utiliza para realizar una conexión a través de un proxy.
 
 (En construcción)
+
 
 **Otros Métodos de petición**
 
@@ -1089,9 +1119,11 @@ Los métodos de extensión (también códigos de error y cabeceras) se pueden de
 
 (En construcción)
 
+
 **Negociación de contenido**
 
 Como se menciona anteriormente, la negociación de contenido HTTP de apoyo entre el cliente y el servidor. Un cliente puede utilizar los encabezados de solicitudes adicionales (como Aceptar, Accept-Language, Accept-Charset, Accept-Encoding) para indicar al servidor que puede manejar o el contenido que se prefiere. Si el servidor posee varias versiones de un mismo documento en un formato diferente, devolverá el formato que el cliente prefiera. Este proceso se llama negociación de contenido.
+
 
 **Tipo-Contenido Negociacion**
 
@@ -1176,6 +1208,7 @@ Las siguientes directivas de configuración de Apache son relevantes para la neg
 
       DefaultType text / plain
 
+
 **Negociación lenguaje y "Opciones MultiView"**
 
 La directiva "Opciones MultiViews" es la forma más simple de implementar la negociación de idioma. Por ejemplo:
@@ -1247,6 +1280,7 @@ AddCharset UCS-2        .ucs2
 AddCharset UCS-4        .ucs4
 AddCharset UTF-8        .utf8
 
+
 **La negociación de codificación**
 
 Un cliente puede utilizar el encabezado Accept-Encoding para indicar al servidor el tipo de codificación que soporta. Los esquemas de codificación comunes son: "x-gzip (.gz, .tgz)" y "x-compress (.Z)".
@@ -1257,6 +1291,7 @@ Del mismo modo, la directiva AddEncoding se utiliza para asociar la extensión d
 
 AddEncoding x-compress  .Z
 AddEncoding x-gzip      .gz .tgz
+
 
 **Conexiones Persistentes (o ejecutandose)**
 
@@ -1289,6 +1324,7 @@ La directiva KeepAliveTimeout establecer el tiempo de espera en segundos para un
 
 KeepAliveTimeout 10
 
+
 **Rango de Descarga**
 
 Accept-Ranges: bytes
@@ -1296,7 +1332,9 @@ Transfer-Encoding: chunked
 
 (En construcción)
 
+
 **Control de Caché**
+
 El cliente puede enviar una solicitud de encabezado "Cache-Control: no-cache" para indicar al proxy para obtener una nueva copia del servidor original, incluso pensado que es una copia en caché local. Por desgracia, servidor HTTP / 1.0 no entiende esta cabecera, pero utiliza un encabezado de la solicitud más antigua "Pragma: no-cache". Usted podría incluir tanto a la cabecera de su solicitud.
 
 Pragma: no-cache
@@ -1304,30 +1342,21 @@ Cache-Control: no-cache
 
 (Más, En construcción)
 
+
+
 **REFERENCIAS Y RECURSOS**
 
 * W3C HTTP Especificaciones en http://www.w3.org/standards/techs/http.
-
 * RFC 2616 "Protocolo de transferencia de hipertexto HTTP / 1.1" de 1999 @ http://www.ietf.org/rfc/rfc2616.txt.
-
 * RFC 1945 "Protocolo de transferencia de hipertexto HTTP / 1.0", 1996 @ http://www.ietf.org/rfc/rfc1945.txt.
-
 * STD 2: "Assigned Numbers", de 1994.
-
 * STD 5: "Protocolo de Internet (IP)" de 1981.
-
 * STD 6: "User Datagram Protocol (UDP)", 1980.
-
 * STD 7: "Protocolo de Control de Transmisión (TCP)", de 1983.
-
 * RFC 2396: "Identificadores uniformes de recursos (URI): Sintaxis Genérica", de 1998.
-
 * RFC 2045: "Multipurpose Internet Mail Extension (MIME) Parte 1: Formato de los mensajes de Internet cuerpos", de 1996.
-
 * RFC 1867: "carga basado en el Formulario de HTML", 1995 (desfasadas por el RFC2854).
-
 * RFC 2854: "El text / html tipo de medio", de 2000.
-
 * Mutlipart servlet para la carga de archivos @ www.servlets.com
 
 

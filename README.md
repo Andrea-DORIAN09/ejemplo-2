@@ -565,7 +565,7 @@ ETag: "10000000565a5-2c-3e94b66c2e680"
 Accept-Ranges: bytes
 Content-Length: 44
 Content-Type: text/html
-```html    
+```html
 <html><body><h1>It works!</h1></body></html>
 ```
 
@@ -1094,6 +1094,7 @@ Los métodos de extensión (también códigos de error y cabeceras) se pueden de
 Como se menciona anteriormente, la negociación de contenido HTTP de apoyo entre el cliente y el servidor. Un cliente puede utilizar los encabezados de solicitudes adicionales (como Aceptar, Accept-Language, Accept-Charset, Accept-Encoding) para indicar al servidor que puede manejar o el contenido que se prefiere. Si el servidor posee varias versiones de un mismo documento en un formato diferente, devolverá el formato que el cliente prefiera. Este proceso se llama negociación de contenido.
 
 **Tipo-Contenido Negociacion**
+
 El servidor utiliza un archivo de configuración MIME (llamado "conf \ mime.types") para asignar la extensión de archivo a un tipo de medio, de modo que pueda determinar el tipo de medio del archivo examinando su extensión de archivo. Por ejemplo, las extensiones de archivos "htm", "html" están asociados con el tipo de medio MIME "text / html", extensión de archivo ".jpg", ".jpeg" están asociados con "image / jpeg". Cuando un archivo se devuelve al cliente, el servidor tiene que aguantar una cabecera de respuesta Content-Type para informar al cliente el tipo de soporte de los datos.
 
 Para la negociación de tipo de contenido, supongamos que las solicitudes de los clientes para un "logotipo" llamada de archivos, sin especificar su tipo, y envía una cabecera "Accept: image / gif, image / jpeg, ...". Si el servidor tiene 2 formatos del "logotipo": "logo.gif" y "logo.jpg", y el archivo de configuración MIME tener las siguientes entradas:
@@ -1257,9 +1258,9 @@ Del mismo modo, la directiva AddEncoding se utiliza para asociar la extensión d
 AddEncoding x-compress  .Z
 AddEncoding x-gzip      .gz .tgz
 
-**Conexiones Persistentes (o ejecutandose) **
+**Conexiones Persistentes (o ejecutandose)**
 
-En HTTP / 1.0, el servidor cierra la conexión TCP después de entregar la respuesta por defecto (Connection: Close). Es decir, cada uno de servicios de conexión TCP sólo una petición. Esta no es la eficiencia tantas páginas HTML contienen hipervínculos (a través de la etiqueta href="URL"> <a) a otros recursos (como imágenes, scripts - ya sea local o desde un servidor remoto). Si descarga una página que contiene 5 imágenes en línea, el navegador tiene que establecer una conexión TCP 6 veces en el mismo servidor.
+En HTTP / 1.0, el servidor cierra la conexión TCP después de entregar la respuesta por defecto (Connection: Close). Es decir, cada uno de servicios de conexión TCP sólo una petición. Esta no es la eficiencia tantas páginas HTML contienen hipervínculos (a través de la etiqueta href="URL"> <a>) a otros recursos (como imágenes, scripts - ya sea local o desde un servidor remoto). Si descarga una página que contiene 5 imágenes en línea, el navegador tiene que establecer una conexión TCP 6 veces en el mismo servidor.
 
 El cliente puede negociar con el servidor y pedir al servidor de no cerrar la conexión después de la entrega de la respuesta, de modo que otra petición puede ser enviada a través de la misma conexión. Esto se conoce como conexión persistente (o keep-alive conexión). Las conexiones persistentes mejoran en gran medida la eficiencia de la red. Para HTTP / 1.0, la conexión por defecto es no persistente. Para solicitar conexión persistente, el cliente debe incluir un encabezado de solicitud "Conexión: keep-alive" en el mensaje de petición de negociar con el servidor.
 

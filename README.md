@@ -155,7 +155,7 @@ El formato de un mensaje de petición HTTP consta de una cabecera de mensaje y u
 
 
 
-###HTTP mensaje de solicitud**
+###HTTP mensaje de solicitud
 
 El formato de un mensaje de petición HTTP es como sigue:
 
@@ -276,7 +276,7 @@ El protocolo HTTP define un conjunto de métodos de petición. Un cliente puede 
 
 
 
-###"GET" Método de solicitud**
+###"GET" Método de solicitud
 
 GET es el método más común de solicitud HTTP. Un cliente puede utilizar el método GET para solicitar (o "get"), para una pieza de recursos desde un servidor HTTP. Un mensaje de petición GET toma la siguiente sintaxis:
 
@@ -293,7 +293,7 @@ GET request-URI HTTP-version
 
 
 
-###Las solicitudes HTTP de pruebas**
+###Las solicitudes HTTP de pruebas
 
 Hay muchas maneras de poner a prueba las peticiones HTTP. Se puede utilizar el programa de utilidad como "telnet" o "Hyperterm" (búsqueda de "telnet.exe" o "hypertrm.exe" en c: \ windows), o escribir el propietario programa de la red para enviar mensaje de solicitud de prima a un servidor HTTP para poner a prueba las diversas peticiones HTTP.
 
@@ -654,7 +654,7 @@ Content-Type: text/html; charset=iso-8859-1
 ```
 
 
-###Las peticiones GET condicionales**
+###Las peticiones GET condicionales
 
 En todos los ejemplos anteriores, el servidor devuelve todo el documento si la petición puede ser satisfecha (es decir incondicional). Es posible utilizar encabezado de la solicitud adicional para emitir una "solicitud condicional". Por ejemplo, para que solicite el documento basado en la fecha de última modificación (a fin de decidir si utilizar la copia caché local), o para pedir una parte del documento (o rango) en lugar de todo el documento (útil para la descarga de documentos de gran tamaño).
 
@@ -1056,7 +1056,7 @@ http://host:port/path?request-parameters#nameAnchor
 
 
 
-###"POST" Método de la Petición**
+###"POST" Método de la Petición
 
 Método de solicitud POST se utiliza para datos adicionales "post" hasta el servidor (por ejemplo, la presentación de los datos del formulario HTML o cargando un archivo). La emisión de un URL HTTP desde el navegador siempre activa una solicitud GET. Para desencadenar una solicitud POST, puede utilizar un formulario HTML con el método de atributo = "post" o escribir su propio programa de la red. Para la presentación de los formularios HTML, solicitud POST es la misma que la solicitud GET, excepto que la cadena de consulta con codificación URL se envía en el cuerpo de la solicitud, en lugar de adjuntó detrás de la URI de solicitud.
 
@@ -1123,7 +1123,7 @@ Tenga en cuenta que aunque la contraseña no se muestra en el cuadro de direcci�
 
 
 
-###Subir archivo usando Petición POST / form-data multiparte**
+###Subir archivo usando Petición POST / form-data multiparte
 
 "RFC 1867 basado en Forma carga de archivos en HTML" especifica un archivo se puede cargar en el servidor mediante una petición POST de un formulario HTML. Un nuevo tipo de atributo = "archivo" se añadió a la etiqueta <input> de <form> HTML para soportar la carga de archivos. Los datos de la POST de carga de archivos no está codificada en URL (en el estándar application / x-www-form-urlencoded), pero utiliza un nuevo tipo MIME multipart / form-data.
 
@@ -1181,14 +1181,14 @@ Servlet 3.0 proporciona soporte integrado para la carga de archivos de procesami
 
 
 
-##"CONNECT" método de la petición##
+##"CONNECT" método de la petición
 
 La solicitud de conexión HTTP se utiliza para pedir un proxy para establecer una conexión con anteras de acogida y simplemente retransmitir el contenido, en lugar de intentar analizar o almacenar en caché el mensaje. Esto a menudo se utiliza para realizar una conexión a través de un proxy.
 
 (En construcción)
 
 
-##Otros Métodos de petición##
+##Otros Métodos de petición
 
 PONER: Pregunta el servidor para almacenar los datos.
 
@@ -1201,7 +1201,7 @@ Los métodos de extensión (también códigos de error y cabeceras) se pueden de
 (En construcción)
 
 
-##Negociación de contenido##
+##Negociación de contenido
 
 Como se menciona anteriormente, la negociación de contenido HTTP de apoyo entre el cliente y el servidor. Un cliente puede utilizar los encabezados de solicitudes adicionales (como Aceptar, Accept-Language, Accept-Charset, Accept-Encoding) para indicar al servidor que puede manejar o el contenido que se prefiere. Si el servidor posee varias versiones de un mismo documento en un formato diferente, devolverá el formato que el cliente prefiera. Este proceso se llama negociación de contenido.
 
@@ -1291,7 +1291,7 @@ Las siguientes directivas de configuración de Apache son relevantes para la neg
 
 
 
-##Negociación lenguaje y "Opciones MultiView"**
+##Negociación lenguaje y "Opciones MultiView"
 
 La directiva "Opciones MultiViews" es la forma más simple de implementar la negociación de idioma. Por ejemplo:
 
@@ -1364,7 +1364,7 @@ AddCharset UTF-8        .utf8
 
 
 
-##La negociación de codificación**
+##La negociación de codificación
 
 Un cliente puede utilizar el encabezado Accept-Encoding para indicar al servidor el tipo de codificación que soporta. Los esquemas de codificación comunes son: "x-gzip (.gz, .tgz)" y "x-compress (.Z)".
 
@@ -1377,7 +1377,7 @@ AddEncoding x-gzip      .gz .tgz
 
 
 
-##Conexiones Persistentes (o ejecutandose)**
+##Conexiones Persistentes (o ejecutandose)
 
 En HTTP / 1.0, el servidor cierra la conexión TCP después de entregar la respuesta por defecto (Connection: Close). Es decir, cada uno de servicios de conexión TCP sólo una petición. Esta no es la eficiencia tantas páginas HTML contienen hipervínculos (a través de la etiqueta href="URL"> <a>) a otros recursos (como imágenes, scripts - ya sea local o desde un servidor remoto). Si descarga una página que contiene 5 imágenes en línea, el navegador tiene que establecer una conexión TCP 6 veces en el mismo servidor.
 
@@ -1410,7 +1410,7 @@ KeepAliveTimeout 10
 
 
 
-##Rango de Descarga**
+##Rango de Descarga
 
 Accept-Ranges: bytes  
 Transfer-Encoding: chunked  
@@ -1419,7 +1419,7 @@ Transfer-Encoding: chunked
 
 
 
-##Control de Caché**
+##Control de Caché
 
 El cliente puede enviar una solicitud de encabezado "Cache-Control: no-cache" para indicar al proxy para obtener una nueva copia del servidor original, incluso pensado que es una copia en caché local. Por desgracia, servidor HTTP / 1.0 no entiende esta cabecera, pero utiliza un encabezado de la solicitud más antigua "Pragma: no-cache". Usted podría incluir tanto a la cabecera de su solicitud.
 
@@ -1430,7 +1430,7 @@ Cache-Control: no-cache
 
 
 
-##REFERENCIAS Y RECURSOS**
+##REFERENCIAS Y RECURSOS
 
 * W3C HTTP Especificaciones en http://www.w3.org/standards/techs/http.  
 * RFC 2616 "Protocolo de transferencia de hipertexto HTTP / 1.1" de 1999 @ http://www.ietf.org/rfc/rfc2616.txt.  

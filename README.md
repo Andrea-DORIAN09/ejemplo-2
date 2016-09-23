@@ -901,6 +901,7 @@ Los clientes suelen presentarse con una forma (bandera producida utilizando HTML
 
 La siguiente es una forma HTML de la muestra, la cual es producida por la siguiente secuencia de comandos HTML:
 
+```html
 <html>  
 <head><title>A Sample HTML Form</title></head>  
 <body>  
@@ -929,6 +930,7 @@ La siguiente es una forma HTML de la muestra, la cual es producida por la siguie
   </form>  
 </body>  
 </html>  
+```
 
 ![Hub Figure10](Figure10.png)
 
@@ -978,6 +980,7 @@ método POST supera estos inconvenientes. Si se utiliza el método solicitud POS
 
 La siguiente formulario HTML se utiliza para recopilar el nombre de usuario y contraseña en un menú de inicio de sesión.
 
+```html
 <html>  
 <head><title>Login</title></head>  
 <body>  
@@ -990,6 +993,7 @@ La siguiente formulario HTML se utiliza para recopilar el nombre de usuario y co
   </form>  
 </body>  
 </html>  
+```
 
 ![Hub Figure11](Figure11.png)
 
@@ -1073,6 +1077,7 @@ Cabeceras de petición Content-Type y Content-Length es necesaria en la solicitu
 
 Utilizamos el mismo guión HTML como el anterior, pero cambiamos el método de la petición POST.
 
+```html
 <html>  
 <head><title>Login</title></head>  
 <body>  
@@ -1085,6 +1090,7 @@ Utilizamos el mismo guión HTML como el anterior, pero cambiamos el método de l
   </form>  
 </body>   
 </html>  
+```
 
 Supongamos que el usuario introduce "Peter Lee" como nombre de usuario y "123456" como contraseña, y pulsa el botón de enviar, la siguiente petición POST sería generada por el navegador:
 

@@ -1173,7 +1173,8 @@ Cache-Control: no-cache
 -----------------------------7d41b838504d8 Content-Disposition: form-data; name="username" 
 Peter Lee  
 -----------------------------7d41b838504d8 Content-Disposition: form-data; name="fileID"; filename="C:\temp.html" Content-Type: text/plain 
-<h1>Home page on main server</h1>   
+```html
+<h1>Home page on main server</h1>```   
 -----------------------------7d41b838504d8--  
 
 Servlet 3.0 proporciona soporte integrado para la carga de archivos de procesamiento. Leer "Carga de archivos en Servlet 3.0".

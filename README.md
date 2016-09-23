@@ -45,6 +45,7 @@ Un URL (Uniform Resource Locator) se utiliza para identificar de forma exclusiva
 protocol://hostname:port/path-and-file-name
 
 Son 4 partes en una dirección URL:
+
 1. Protocolo: El protocolo de nivel de aplicación utilizada por el cliente y el servidor, por ejemplo, HTTP, FTP y telnet.
 
 2. Nombre de host: El nombre de dominio DNS (por ejemplo, www.nowhere123.com) o la dirección IP (por ejemplo, 192.128.1.2) del servidor.
@@ -58,8 +59,11 @@ Por ejemplo, en la http://www.nowhere123.com/docs/index.html URL, el protocolo d
 Otros ejemplos de URL son:
 
 ftp://www.ftp.org/docs/test.txt
+
 mailto:user@test101.com
+
 news:soc.culture.Singapore
+
 telnet://www.nowhere123.com/
 
 

@@ -935,16 +935,16 @@ La siguiente es una forma HTML de la muestra, la cual es producida por la siguie
 ![Hub Figure10](Figure10.png)
 
 Un formulario contiene campos. Los tipos de campo incluyen:
-* Caja de texto: producido por <input type = "text">.  
-* Caja de Contraseña: producido por <input type = "password">.  
-* Botón de radio: producido por <input type = "radio">.  
-* Caja marca casillas: producido por <input type = "checkbox">.  
-* Selección: producido por <select> y <opción>.  
-* Área de texto: producido por <textarea>.  
-* Botón de envío: producido por <input type = "submit">.  
-* Botón de reinicio: producido por <input type = "reset">.  
-* El campo oculto: producido por <input type = "hidden">.  
-* Botón: producido por <input type = "button">.  
+* Caja de texto: producido por ```html <input type = "text">.```  
+* Caja de Contraseña: producido por <input type = "password">.```  
+* Botón de radio: producido por <input type = "radio">.```  
+* Caja marca casillas: producido por <input type = "checkbox">.```  
+* Selección: producido por ```html<select> y <opción>.```  
+* Área de texto: producido por ```html<textarea>.```  
+* Botón de envío: producido por ```html<input type = "submit">.```  
+* Botón de reinicio: producido por ```html<input type = "reset">.```  
+* El campo oculto: producido por ```html<input type = "hidden">.```  
+* Botón: producido por ```html<input type = "button">.```  
 
 Cada campo tiene un nombre y puede tomar un valor especificado. Una vez que el cliente rellena los campos y pulsa el botón de enviar, el navegador recoge cada uno de nombre y valor de los campos ', llena en "nombre = valor" pares, y concatena todos los campos juntos utilizando "&" como separador de campo. Esto se conoce como una cadena de consulta. Se enviará la cadena de consulta al servidor como parte de la solicitud.
 

@@ -1172,8 +1172,9 @@ Cache-Control: no-cache
    
 -----------------------------7d41b838504d8 Content-Disposition: form-data; name="username" 
 Peter Lee  
------------------------------7d41b838504d8 Content-Disposition: form-data; name="fileID"; filename="C:\temp.html" Content-Type: text/plain 
-```html
+-----------------------------7d41b838504d8 Content-Disposition: form-data; name="fileID"; filename="C:\temp.html" 
+```html 
+Content-Type:text/plain
 <h1>Home page on main server</h1>```   
 -----------------------------7d41b838504d8--  
 
@@ -1430,7 +1431,7 @@ Cache-Control: no-cache
 
 
 
-##REFERENCIAS Y RECURSOS
+##REFERENCIAS Y RECURSOS###
 
 * W3C HTTP Especificaciones en http://www.w3.org/standards/techs/http.  
 * RFC 2616 "Protocolo de transferencia de hipertexto HTTP / 1.1" de 1999 @ http://www.ietf.org/rfc/rfc2616.txt.  

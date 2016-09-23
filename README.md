@@ -1170,10 +1170,11 @@ Content-Length: 342
 Connection: Keep-Alive  
 Cache-Control: no-cache  
 
-```html    
+```html
 -----------------------------7d41b838504d8 Content-Disposition: form-data; name="username" 
 Peter Lee  
------------------------------7d41b838504d8 Content-Disposition: form-data; name="fileID"; filename="C:\temp.html" Content-Type:text/plain
+-----------------------------7d41b838504d8 Content-Disposition: form-data; name="fileID"; filename="C:\temp.html" 
+Content-Type:text/plan
 <h1>Home page on main server</h1>   
 -----------------------------7d41b838504d8--  
 ```

@@ -1173,24 +1173,23 @@ Cache-Control: no-cache
 ```html    
 -----------------------------7d41b838504d8 Content-Disposition: form-data; name="username" 
 Peter Lee  
------------------------------7d41b838504d8 Content-Disposition: form-data; name="fileID"; filename="C:\temp.html" 
-
-Content-Type:text/plain
+-----------------------------7d41b838504d8 Content-Disposition: form-data; name="fileID"; filename="C:\temp.html" Content-Type:text/plain
 <h1>Home page on main server</h1>   
------------------------------7d41b838504d8--```  
+-----------------------------7d41b838504d8--  
+```
 
 Servlet 3.0 proporciona soporte integrado para la carga de archivos de procesamiento. Leer "Carga de archivos en Servlet 3.0".
 
 
 
-##"CONNECT" método de la petición
+###"CONNECT" método de la petición
 
 La solicitud de conexión HTTP se utiliza para pedir un proxy para establecer una conexión con anteras de acogida y simplemente retransmitir el contenido, en lugar de intentar analizar o almacenar en caché el mensaje. Esto a menudo se utiliza para realizar una conexión a través de un proxy.
 
 (En construcción)
 
 
-##Otros Métodos de petición
+###Otros Métodos de petición
 
 PONER: Pregunta el servidor para almacenar los datos.
 
@@ -1203,12 +1202,12 @@ Los métodos de extensión (también códigos de error y cabeceras) se pueden de
 (En construcción)
 
 
-##Negociación de contenido
+###Negociación de contenido
 
 Como se menciona anteriormente, la negociación de contenido HTTP de apoyo entre el cliente y el servidor. Un cliente puede utilizar los encabezados de solicitudes adicionales (como Aceptar, Accept-Language, Accept-Charset, Accept-Encoding) para indicar al servidor que puede manejar o el contenido que se prefiere. Si el servidor posee varias versiones de un mismo documento en un formato diferente, devolverá el formato que el cliente prefiera. Este proceso se llama negociación de contenido.
 
 
-##Tipo-Contenido Negociacion
+###Tipo-Contenido Negociacion
 
 El servidor utiliza un archivo de configuración MIME (llamado "conf \ mime.types") para asignar la extensión de archivo a un tipo de medio, de modo que pueda determinar el tipo de medio del archivo examinando su extensión de archivo. Por ejemplo, las extensiones de archivos "htm", "html" están asociados con el tipo de medio MIME "text / html", extensión de archivo ".jpg", ".jpeg" están asociados con "image / jpeg". Cuando un archivo se devuelve al cliente, el servidor tiene que aguantar una cabecera de respuesta Content-Type para informar al cliente el tipo de soporte de los datos.
 
@@ -1293,7 +1292,7 @@ Las siguientes directivas de configuración de Apache son relevantes para la neg
 
 
 
-##Negociación lenguaje y "Opciones MultiView"
+###Negociación lenguaje y "Opciones MultiView"
 
 La directiva "Opciones MultiViews" es la forma más simple de implementar la negociación de idioma. Por ejemplo:
 
@@ -1366,7 +1365,7 @@ AddCharset UTF-8        .utf8
 
 
 
-##La negociación de codificación
+###La negociación de codificación
 
 Un cliente puede utilizar el encabezado Accept-Encoding para indicar al servidor el tipo de codificación que soporta. Los esquemas de codificación comunes son: "x-gzip (.gz, .tgz)" y "x-compress (.Z)".
 
@@ -1379,7 +1378,7 @@ AddEncoding x-gzip      .gz .tgz
 
 
 
-##Conexiones Persistentes (o ejecutandose)
+###Conexiones Persistentes (o ejecutandose)
 
 En HTTP / 1.0, el servidor cierra la conexión TCP después de entregar la respuesta por defecto (Connection: Close). Es decir, cada uno de servicios de conexión TCP sólo una petición. Esta no es la eficiencia tantas páginas HTML contienen hipervínculos (a través de la etiqueta href="URL"> <a>) a otros recursos (como imágenes, scripts - ya sea local o desde un servidor remoto). Si descarga una página que contiene 5 imágenes en línea, el navegador tiene que establecer una conexión TCP 6 veces en el mismo servidor.
 
@@ -1412,7 +1411,7 @@ KeepAliveTimeout 10
 
 
 
-##Rango de Descarga
+###Rango de Descarga
 
 Accept-Ranges: bytes  
 Transfer-Encoding: chunked  
@@ -1421,7 +1420,7 @@ Transfer-Encoding: chunked
 
 
 
-##Control de Caché
+###Control de Caché
 
 El cliente puede enviar una solicitud de encabezado "Cache-Control: no-cache" para indicar al proxy para obtener una nueva copia del servidor original, incluso pensado que es una copia en caché local. Por desgracia, servidor HTTP / 1.0 no entiende esta cabecera, pero utiliza un encabezado de la solicitud más antigua "Pragma: no-cache". Usted podría incluir tanto a la cabecera de su solicitud.
 
@@ -1432,7 +1431,7 @@ Cache-Control: no-cache
 
 
 
-##REFERENCIAS Y RECURSOS###
+###REFERENCIAS Y RECURSOS###
 
 * W3C HTTP Especificaciones en http://www.w3.org/standards/techs/http.  
 * RFC 2616 "Protocolo de transferencia de hipertexto HTTP / 1.1" de 1999 @ http://www.ietf.org/rfc/rfc2616.txt.  

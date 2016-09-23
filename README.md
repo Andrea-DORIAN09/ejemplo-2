@@ -1169,14 +1169,15 @@ User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
 Content-Length: 342  
 Connection: Keep-Alive  
 Cache-Control: no-cache  
-   
+
+```html    
 -----------------------------7d41b838504d8 Content-Disposition: form-data; name="username" 
 Peter Lee  
 -----------------------------7d41b838504d8 Content-Disposition: form-data; name="fileID"; filename="C:\temp.html" 
-```html 
+
 Content-Type:text/plain
-<h1>Home page on main server</h1>```   
------------------------------7d41b838504d8--  
+<h1>Home page on main server</h1>   
+-----------------------------7d41b838504d8--```  
 
 Servlet 3.0 proporciona soporte integrado para la carga de archivos de procesamiento. Leer "Carga de archivos en Servlet 3.0".
 
